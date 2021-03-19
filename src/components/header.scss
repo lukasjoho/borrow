@@ -1,0 +1,94 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins/_breakpoints";
+
+@mixin indicator {
+  .indicator {
+    height: 3px;
+    align-self: center;
+    width: 0px;
+    transform-origin: center;
+    transition: width 150ms;
+
+    &.active {
+      width: 100%;
+      transition: width 150ms ease-in-out;
+    }
+  }
+}
+
+.navbar {
+  box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.1);
+  .navbar-brand {
+    border: none;
+    background: transparent;
+    padding-left: 0;
+  }
+
+  .navbar-collapse {
+    .navbar-nav {
+      padding-top: 3rem;
+      padding-bottom: 1rem;
+      align-items: flex-start;
+
+      @include media-breakpoint-up(md) {
+        padding: 0rem;
+      }
+      .nav-link {
+        font-weight: 500;
+        color: red;
+        padding: 0 2rem;
+        line-height: 3rem;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+
+        &:hover {
+          color: initial;
+        }
+
+        &:focus {
+          color: initial;
+        }
+
+        @include media-breakpoint-up(md) {
+          margin-bottom: 0;
+          font-size: 1.6rem;
+        }
+
+        @include indicator;
+      }
+    }
+  }
+
+  .lottie-container {
+    position: relative;
+    top: 0.2rem; // Counter unalignment of lottie svg
+    width: 2.7rem;
+    border: none;
+    color: red;
+    padding: 0;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    line-height: 1.2;
+    text-align: left;
+    @include media-breakpoint-up(md) {
+      line-height: 1;
+      align-items: flex-end;
+    }
+
+    img {
+      height: 4rem;
+      margin-right: 0.8rem;
+      @include media-breakpoint-up(md) {
+        height: 6rem;
+      }
+    }
+  }
+}

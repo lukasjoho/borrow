@@ -1,42 +1,43 @@
-import * as React from "react"
-import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import React, { useState } from "react"
+import { Nav, Navbar } from "react-bootstrap"
+import Lottie from "lottie-react-web"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
+import NavbarToggle from "./navbar-toggle.json"
+
+import "./header.scss"
+
+const Header = ({ activePage, subpages }) => {
+  const [menuToggled, setMenuToggled] = useState(false)
+
+  const handleMenuToggle = () => {
+    setMenuToggled(prevState => !prevState)
+  }
+
+  return (
+    <Navbar expand="md" onToggle={handleMenuToggle}>
+      <Navbar.Brand as="button">
+        <div className="logo">Logo</div>
+      </Navbar.Brand>
+      <Navbar.Toggle className="lottie-container">
+        <Lottie
+          tabIndex="-1"
+          isPaused={false}
+          direction={menuToggled ? 1 : -1}
+          speed={3}
+          options={{
+            animationData: NavbarToggle,
+            loop: false,
           }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+        />
+      </Navbar.Toggle>
+      <Navbar.Collapse>
+        <Nav className="ml-auto">
+          <Nav.Link>Unser Konzept</Nav.Link>
+          <Nav.Link>Bewerbung</Nav.Link>
+          <Nav.Link>Kontakt</Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
+  )
 }
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
 export default Header
