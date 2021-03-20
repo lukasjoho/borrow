@@ -29,7 +29,7 @@ const IndexPage = () => {
     <>
       <SEO
         title="Nie zuvor war leihen so einfach."
-        description="Überzeuge dich selbst und regristiere dich kostenlos für die Borrow.App"
+        description="Überzeuge dich selbst und regristiere dich kostenlos für die Borrow App"
         image={imageSeo.childImageSharp.fixed.src}
         url="getborrow.netlify.app"
       />
