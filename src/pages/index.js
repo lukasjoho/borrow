@@ -16,7 +16,7 @@ import Steps from "../components/Steps/Steps"
 const IndexPage = () => {
   const { imageSeo } = useStaticQuery(graphql`
     query {
-      imageSeo: file(relativePath: { eq: "image-laughing-people.png" }) {
+      imageSeo: file(relativePath: { eq: "image-laughing-people.jpg" }) {
         childImageSharp {
           fixed(width: 1200, quality: 90) {
             src
@@ -31,7 +31,7 @@ const IndexPage = () => {
         title="Nie zuvor war leihen so einfach."
         description="Überzeuge dich selbst und regristiere dich kostenlos für die Borrow.App"
         image={imageSeo.childImageSharp.fixed.src}
-        url="goborrow.netlify.app"
+        url="getborrow.netlify.app"
       />
       <Header />
       <Hero />
