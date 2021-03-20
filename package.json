@@ -7,6 +7,7 @@
   "dependencies": {
     "bootstrap": "^4.6.0",
     "gatsby": "^3.0.1",
+    "gatsby-image": "^3.1.0",
     "gatsby-plugin-gatsby-cloud": "^2.0.0",
     "gatsby-plugin-image": "^1.0.0",
     "gatsby-plugin-manifest": "^3.0.0",
@@ -26,6 +27,7 @@
     "sass": "^1.32.8"
   },
   "devDependencies": {
+    "gatsby-plugin-root-import": "^2.0.6",
     "prettier": "2.2.1"
   },
   "keywords": [

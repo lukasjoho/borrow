@@ -1,10 +1,50 @@
 import * as React from "react"
-import Header from "../components/Header"
+import { graphql, useStaticQuery } from "gatsby"
+import Box from "../components/Blogpost/Box"
+import Footer from "../components/Footer/Footer"
+import Functionalities from "../components/Functionalities/Functionalities"
+import GetStarted from "../components/GetStarted/GetStarted"
+import Header from "../components/Header/Header"
+import Hero from "../components/Hero/Hero"
+import Items from "../components/Items/Items"
+import Team from "../components/Team/Team"
+import Testimonials from "../components/Testimonials/Testimonials"
+import SEO from "src/components/Seo"
+import "../styles.scss"
+import Steps from "../components/Steps/Steps"
 
-const IndexPage = () => (
-  <>
-    <Header />
-  </>
-)
+const IndexPage = () => {
+  const { imageSeo } = useStaticQuery(graphql`
+    query {
+      imageSeo: file(relativePath: { eq: "image-laughing-people.png" }) {
+        childImageSharp {
+          fixed(width: 1200, quality: 90) {
+            src
+          }
+        }
+      }
+    }
+  `)
+  return (
+    <>
+      <SEO
+        title="Nie zuvor war leihen so einfach."
+        description="Überzeuge dich selbst und regristiere dich kostenlos für die Borrow.App"
+        image={imageSeo.childImageSharp.fixed.src}
+        url="goborrow.netlify.app"
+      />
+      <Header />
+      <Hero />
+      <Functionalities />
+      <Steps />
+      <Testimonials />
+      <Items />
+      <Box />
+      <Team />
+      <GetStarted />
+      <Footer />
+    </>
+  )
+}
 
 export default IndexPage
