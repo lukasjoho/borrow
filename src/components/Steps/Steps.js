@@ -2,10 +2,12 @@ import React from "react"
 import { Container, Row, Col } from "react-bootstrap"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
+import "./steps.scss"
 const Step = ({ number, text }) => {
   return (
-    <div>
-      <div>{number}</div>
+    <div className="step">
+      <div className="box"></div>
+      <div className="number">{number}</div>
       <div>{text}</div>
     </div>
   )
@@ -30,10 +32,17 @@ const Steps = () => {
             {/* <Img fluid={image.childImageSharp.fluid} alt="" /> */}
             <h2>In 3 Schritten zu deinem Item</h2>
           </Col>
-          <Col md={6}>
-            <Step number="1" text="Erstelle deinen kostenfreien Account" />
-            <Step number="2" text="Finde dein erstes Item" />
-            <Step number="3" text="Borrow.It" />
+        </Row>
+        <Row className="staircase">
+          <Col md={4}>
+            <Step number="01" text="Erstelle deinen kostenfreien Account" />
+          </Col>
+          <Col md={4}>
+            <Step number="02" text="Finde dein erstes Item" />
+          </Col>
+
+          <Col md={4}>
+            <Step number="03" text="Borrow.It" />
           </Col>
         </Row>
       </Container>

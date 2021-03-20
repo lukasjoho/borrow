@@ -1,2 +1,15 @@
 #functionalities {
+  background: linear-gradient(104deg, #6e9fe9 -3.34%, #ce93d8 72.31%);
+  color: white;
+  .image-container {
+    display: flex;
+    align-items: flex-end;
+    .image {
+      width: 100%;
+    }
+  }
+  .text-container {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
 }

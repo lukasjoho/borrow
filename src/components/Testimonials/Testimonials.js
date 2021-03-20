@@ -3,12 +3,20 @@ import { Container, Row, Col } from "react-bootstrap"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import "./testimonials.scss"
+import IconQuotemarks from "src/images/icon-quotemarks.svg"
+import IconArrow from "src/images/icon-arrow-right.svg"
 const Entry = ({ text, person, image }) => {
   return (
     <div className="entry">
-      <p>{text}</p>
-      <Img fluid={image.childImageSharp.fluid} />
-      <p>{person}</p>
+      <div className="text">
+        <p>{text}</p>
+      </div>
+      <div className="person">
+        <p>{person}</p>
+        <div className="image">
+          <Img fluid={image.childImageSharp.fluid} />
+        </div>
+      </div>
     </div>
   )
 }
@@ -27,7 +35,14 @@ const Testimonials = () => {
   return (
     <section id="testimonials">
       <Container>
-        <Row>
+        <Row className="position-relative">
+          <div className="label">
+            Das sagt die Borrow.Community über unsere App
+            <img src={IconArrow} alt="" />
+          </div>
+          <div className="quotemarks">
+            <img src={IconQuotemarks} alt="" />
+          </div>
           <Col md={4}>
             <Entry
               text="Ich hatte neulich einen Freund zu Besuch und brauchte ein Fahhrad, um ihm die Gegend zu zeigen. Dank Borrow. konnte ich mir mit wenigen Klicks noch am selben Tag ein paar Straßen weiter eins abholen und habe dies am nächsten Tag wieder zurückgebracht. Super easy und unkompliziert!"

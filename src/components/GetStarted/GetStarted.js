@@ -4,10 +4,11 @@ import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import "./getstarted.scss"
 import Stores from "../00-General/Stores/Stores"
+import IconPattern from "src/images/icon-pattern.svg"
 const GetStarted = () => {
   const { image } = useStaticQuery(graphql`
     query {
-      image: file(relativePath: { eq: "image-laughing-people.png" }) {
+      image: file(relativePath: { eq: "image-iphone-borrow.png" }) {
         childImageSharp {
           fluid(quality: 70, maxWidth: 540) {
             ...GatsbyImageSharpFluid_noBase64
@@ -20,12 +21,19 @@ const GetStarted = () => {
     <section id="getstarted">
       <Container>
         <Row>
-          <Col md={6}>
+          <Col md={6} className="text-container">
             {/* <Img fluid={image.childImageSharp.fluid} alt="" /> */}
             <h2>Starte jetzt und werde ein Teil der Borrow.Community.</h2>
             <Stores />
           </Col>
-          <Col md={6}></Col>
+          <Col md={6} className="image-container">
+            <div className="image">
+              <Img fluid={image.childImageSharp.fluid} />
+            </div>
+            <div className="shape">
+              <img src={IconPattern} alt="" />
+            </div>
+          </Col>
         </Row>
       </Container>
     </section>

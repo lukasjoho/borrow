@@ -1,2 +1,26 @@
 #steps {
+  padding: 12rem 0;
+  h2 {
+    text-align: center;
+  }
+  .staircase {
+    & > div:nth-child(2) {
+      margin-top: 6rem;
+    }
+    & > div:nth-child(3) {
+      margin-top: 12rem;
+    }
+  }
+  .step {
+    .box {
+      width: 6rem;
+      height: 6rem;
+      border-radius: 100%;
+      background: red;
+    }
+    .number {
+      opacity: 0.25;
+      font-size: 3rem;
+    }
+  }
 }

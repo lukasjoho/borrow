@@ -2,10 +2,13 @@ import React from "react"
 import { Container, Row, Col } from "react-bootstrap"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
+import "./team.scss"
 const Member = ({ image, name, position }) => {
   return (
-    <div>
-      <Img fluid={image.childImageSharp.fluid} />
+    <div className="member">
+      <div className="image">
+        <Img fluid={image.childImageSharp.fluid} />
+      </div>
       <h3>{name}</h3>
       <p>{position}</p>
     </div>
@@ -37,16 +40,18 @@ const Team = () => {
         <Row>
           <Col md={12}>
             {/* <Img fluid={image.childImageSharp.fluid} alt="" /> */}
-            <h2>Und wir fangen gerade erst an.</h2>
-            <p>
-              Im Rahmen des TechLabs Münster “Digital Shaper Program” haben wir
-              uns als Team formatiert, um uns der Aufgabe zu stellen,eine eigene
-              App im Sinne von “Tech4Good” zu gestalten. Mit der Borrow.App
-              wollen wir es Münsteraner Studierenden, wie uns selbst,
-              ermöglichen, in einer lokalen Community Nachhaltigkeit in den
-              Alltag zu integrieren. Dabei steht die Leichtigkeit und
-              User-Freundlichkeit immer im Fokus unseres Creation-Prozesses.
-            </p>
+            <div className="text-container">
+              <h2>Und wir fangen gerade erst an.</h2>
+              <p>
+                Im Rahmen des TechLabs Münster “Digital Shaper Program” haben
+                wir uns als Team formatiert, um uns der Aufgabe zu stellen,eine
+                eigene App im Sinne von “Tech4Good” zu gestalten. Mit der
+                Borrow.App wollen wir es Münsteraner Studierenden, wie uns
+                selbst, ermöglichen, in einer lokalen Community Nachhaltigkeit
+                in den Alltag zu integrieren. Dabei steht die Leichtigkeit und
+                User-Freundlichkeit immer im Fokus unseres Creation-Prozesses.
+              </p>
+            </div>
           </Col>
           <Col md={3}>
             <Member image={imageAnika} name="Anika" position="UX Design" />

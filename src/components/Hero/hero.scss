@@ -1,5 +1,33 @@
+@import "../../variables";
 @import "node_modules/bootstrap/scss/functions";
 @import "node_modules/bootstrap/scss/variables";
 @import "node_modules/bootstrap/scss/mixins/_breakpoints";
+
 #hero {
+  // background: blue;
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .visual-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    .circles-position {
+      // position: absolute;
+      // top: 0;
+      // left: 0;
+      // background: green;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+
+      z-index: -1;
+    }
+  }
+  .image {
+    width: 50%;
+  }
 }

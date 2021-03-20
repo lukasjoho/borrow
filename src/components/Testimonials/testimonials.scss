@@ -1,12 +1,42 @@
+@import "../../variables";
+
 #testimonials {
+  background: $blue;
+  position: relative;
+  padding: 12rem 0;
+  .label {
+    position: absolute;
+    left: 0;
+    transform: translate3d(-50%, -50%, 0);
+  }
+  .quotemarks {
+    position: absolute;
+    right: 0;
+    transform: translate3d(50%, -50%, 0);
+  }
   .entry {
-    // background: red;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    p {
-      align-self: flex-start;
+    justify-content: flex-start;
+    .text {
+      background: white;
+      padding: 3rem;
+      border-radius: 2rem;
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+    }
+    .person {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      p {
+        margin-right: 2rem;
+      }
+      .image {
+        width: 8rem;
+      }
     }
   }
 }

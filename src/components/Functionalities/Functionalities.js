@@ -2,7 +2,7 @@ import React from "react"
 import { Container, Row, Col } from "react-bootstrap"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
-
+import "./functionalities.scss"
 const Item = ({ title, text }) => {
   return (
     <div>
@@ -27,10 +27,12 @@ const Functionalities = () => {
     <section id="functionalities">
       <Container>
         <Row>
-          <Col md={6}>
-            <Img fluid={image.childImageSharp.fluid} alt="" />
+          <Col md={6} className="image-container">
+            <div className="image">
+              <Img fluid={image.childImageSharp.fluid} alt="" />
+            </div>
           </Col>
-          <Col md={6}>
+          <Col md={6} className="text-container">
             <Item
               title="Borrow.Points"
               text="Sammle  mit jedem Deal Punkte und steige im Community Ranking auf"

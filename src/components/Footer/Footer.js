@@ -20,7 +20,7 @@ const Footer = () => {
   return (
     <section id="footer">
       <Container>
-        <Row>
+        <Row className="top">
           <Col md={6}>
             {/* <Img fluid={image.childImageSharp.fluid} alt="" /> */}
             <Logo />
@@ -45,7 +45,9 @@ const Footer = () => {
               <li>Lukas Hoppe</li>
             </ul>
           </Col>
-          <Col md={12}>
+        </Row>
+        <Row>
+          <Col md={12} className="copyright">
             <p>All rights reserved</p>
           </Col>
         </Row>
