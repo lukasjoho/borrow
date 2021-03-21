@@ -14,7 +14,12 @@ import "../styles.scss"
 import Steps from "../components/Steps/Steps"
 import "@fontsource/just-me-again-down-here/400.css"
 import "animate.css/animate.min.css"
-
+import {
+  Scroll,
+  Zoom,
+  Fade,
+  SlideInLeft,
+} from "src/components/00-General/Animation"
 const IndexPage = () => {
   const { imageSeo } = useStaticQuery(graphql`
     query {
@@ -35,16 +40,18 @@ const IndexPage = () => {
         image={imageSeo.childImageSharp.fixed.src}
         url="getborrow.netlify.app"
       />
-      <Header />
-      <Hero />
-      <Functionalities />
-      <Steps />
-      <Testimonials />
-      <Items />
-      <Box />
-      <Team />
-      <GetStarted />
-      <Footer />
+      <Fade>
+        <Header />
+        <Hero />
+        <Functionalities />
+        <Steps />
+        <Testimonials />
+        <Items />
+        <Box />
+        <Team />
+        <GetStarted />
+        <Footer />
+      </Fade>
     </>
   )
 }
