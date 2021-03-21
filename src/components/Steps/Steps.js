@@ -58,51 +58,53 @@ const Steps = () => {
   return (
     <section id="steps">
       <Container>
-        <Row>
-          <Col md={12}>
-            {/* <Img fluid={image.childImageSharp.fluid} alt="" /> */}
-            <Scroll>
-              <h2>
-                In <span>3</span> Schritten zu deinem Item
-              </h2>
-            </Scroll>
-          </Col>
-        </Row>
-        <div className="staircase">
-          <Step
-            number="01"
-            text={
-              <>
-                Erstelle deinen <strong>kostenfreien Account</strong>
-              </>
-            }
-            icon={IconUser}
-            color="blue"
-            line={IconLine1}
-          />
-          <Step
-            number="02"
-            text={
-              <>
-                Finde dein <strong>erstes Item</strong>
-              </>
-            }
-            icon={IconCheck}
-            color="violet"
-            line={IconLine2}
-          />
+        <Zoom>
+          <div className="panel">
+            <Row>
+              <Col md={12}>
+                {/* <Img fluid={image.childImageSharp.fluid} alt="" /> */}
+                <h2>
+                  In <span>3</span> Schritten zu deinem Item
+                </h2>
+              </Col>
+            </Row>
+            <div className="staircase">
+              <Step
+                number="01"
+                text={
+                  <>
+                    Erstelle deinen <strong>kostenfreien Account</strong>
+                  </>
+                }
+                icon={IconUser}
+                color="blue"
+                line={IconLine1}
+              />
+              <Step
+                number="02"
+                text={
+                  <>
+                    Finde dein <strong>erstes Item</strong>
+                  </>
+                }
+                icon={IconCheck}
+                color="violet"
+                line={IconLine2}
+              />
 
-          <Step
-            number="03"
-            text={
-              <>
-                <strong>Borrow </strong> it
-              </>
-            }
-            icon={IconHandshake}
-            color="green"
-          />
-        </div>
+              <Step
+                number="03"
+                text={
+                  <>
+                    <strong>Borrow </strong> it
+                  </>
+                }
+                icon={IconHandshake}
+                color="green"
+              />
+            </div>
+          </div>
+        </Zoom>
       </Container>
     </section>
   )

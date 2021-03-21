@@ -9,7 +9,7 @@
     font-size: 2rem;
     position: absolute;
     right: 0;
-    transform: translate3d(-5%, 150%, 0);
+    transform: translate3d(5%, 150%, 0);
     @include media-breakpoint-up(md) {
       font-size: 3rem;
       transform: translate3d(15%, 150%, 0);
@@ -25,6 +25,7 @@
       }
     }
     span {
+      white-space: nowrap;
     }
   }
   .box-container {

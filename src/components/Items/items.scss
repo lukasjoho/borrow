@@ -2,13 +2,16 @@
 @import "node_modules/bootstrap/scss/variables";
 @import "node_modules/bootstrap/scss/mixins/_breakpoints";
 #items {
-  padding: 6rem 0 4rem;
+  padding: 6rem 0 0rem;
   @include media-breakpoint-up(md) {
     padding: 12rem 0 10rem;
   }
   .text-container {
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
     text-align: center;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 6rem;
+    }
   }
   .circle-container {
     position: relative;

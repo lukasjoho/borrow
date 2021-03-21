@@ -1,0 +1,13 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins/_breakpoints";
+
+.logo {
+  width: 100px;
+  img {
+    width: 100%;
+  }
+  @include media-breakpoint-up(md) {
+    width: auto;
+  }
+}
