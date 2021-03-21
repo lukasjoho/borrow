@@ -68,47 +68,41 @@ const Steps = () => {
             </Scroll>
           </Col>
         </Row>
-        <Row className="staircase">
-          <Col md={4}>
-            <Step
-              number="01"
-              text={
-                <>
-                  Erstelle deinen <strong>kostenfreien Account</strong>
-                </>
-              }
-              icon={IconUser}
-              color="blue"
-              line={IconLine1}
-            />
-          </Col>
-          <Col md={4}>
-            <Step
-              number="02"
-              text={
-                <>
-                  Finde dein <strong>erstes Item</strong>
-                </>
-              }
-              icon={IconCheck}
-              color="violet"
-              line={IconLine2}
-            />
-          </Col>
+        <div className="staircase">
+          <Step
+            number="01"
+            text={
+              <>
+                Erstelle deinen <strong>kostenfreien Account</strong>
+              </>
+            }
+            icon={IconUser}
+            color="blue"
+            line={IconLine1}
+          />
+          <Step
+            number="02"
+            text={
+              <>
+                Finde dein <strong>erstes Item</strong>
+              </>
+            }
+            icon={IconCheck}
+            color="violet"
+            line={IconLine2}
+          />
 
-          <Col md={4}>
-            <Step
-              number="03"
-              text={
-                <>
-                  <strong>Borrow </strong> it
-                </>
-              }
-              icon={IconHandshake}
-              color="green"
-            />
-          </Col>
-        </Row>
+          <Step
+            number="03"
+            text={
+              <>
+                <strong>Borrow </strong> it
+              </>
+            }
+            icon={IconHandshake}
+            color="green"
+          />
+        </div>
       </Container>
     </section>
   )

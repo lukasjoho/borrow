@@ -10,7 +10,7 @@ html {
 
   body {
     font-size: 1.6rem;
-    color: black;
+    color: #1a1a1a;
     overflow-x: hidden;
     @include media-breakpoint-up(md) {
       font-size: 1.8rem;
@@ -21,6 +21,7 @@ html {
     h4,
     h5 {
       margin: 0;
+      font-family: "Rubik";
     }
 
     h1 {
@@ -47,9 +48,23 @@ html {
       margin: 0;
       color: $text-secondary;
       line-height: 2;
+      font-weight: 300;
     }
   }
   .no-overflow {
     overflow-y: hidden;
+  }
+  .site-gradient {
+    background: linear-gradient(
+      172.51deg,
+      rgba(203, 147, 217, 0.05) 8.52%,
+      rgba(110, 159, 233, 0.045) 85.45%
+    );
+  }
+  .section-title {
+    margin-bottom: 1rem;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 2rem;
+    }
   }
 }

@@ -31,7 +31,9 @@ const GetStarted = () => {
             {/* <Img fluid={image.childImageSharp.fluid} alt="" /> */}
             <div className="no-overflow">
               <Scroll>
-                <h2>Starte jetzt und werde ein Teil der Borrow.Community.</h2>
+                <h2 className="section-title">
+                  Starte jetzt und werde ein Teil der Borrow.Community.
+                </h2>
               </Scroll>
             </div>
             <Stores />

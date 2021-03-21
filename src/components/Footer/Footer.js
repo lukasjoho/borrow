@@ -44,6 +44,7 @@ const Footer = () => {
             <ul>
               <li>Support</li>
               <li>TechLabs</li>
+              <li>Nina Engbert</li>
               <li>Lukas Hoppe</li>
             </ul>
           </Col>

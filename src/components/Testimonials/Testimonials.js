@@ -82,7 +82,7 @@ const Testimonials = () => {
             </Col>
             <Col lg={4}>
               <Entry
-                text="Als ich zum Studium nach Münster gekommen bin, fiel mir auf der Fahrt auf, dass ich die Farbrolle zuhause vergessen hatte. Da es ein Sonntag war, hatte ich das Streichen gedanklich schon auf einen anderen Tag verschoben. Mein WG-Mitbewohner erzählte mir von der Borrow.-App, und glücklicherweise fand ich das passende Item im anliegenden Stadtviertel. Da es mir so super geholfen hat, werde ich in Zukunft auch selbst Artikel verleihen!"
+                text="Bei meinem Umzug fiel mir auf der Fahrt auf, dass ich die Farbrolle zuhause vergessen hatte. Da es ein Sonntag war, hatte ich das Streichen gedanklich schon auf einen anderen Tag verschoben. Meine neue WG-Mitbewohnerin erzählte mir von der Borrow.App, und glücklicherweise fand ich das passende Item im anliegenden Stadtviertel!"
                 person="Lisa, 19"
                 image={image3}
               />

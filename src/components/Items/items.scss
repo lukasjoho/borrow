@@ -9,8 +9,6 @@
   .text-container {
     margin-bottom: 6rem;
     text-align: center;
-    h2 {
-    }
   }
   .circle-container {
     position: relative;
@@ -32,9 +30,11 @@
       margin-bottom: 3rem;
       &:nth-child(2) {
         transform: translateX(calc(100% / 7 / 2));
+        opacity: 0.75;
       }
       &:nth-child(3) {
         transform: translateX(calc(100% / 7));
+        opacity: 0.5;
       }
     }
     .segment {

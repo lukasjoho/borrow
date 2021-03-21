@@ -6,6 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@fontsource/just-me-again-down-here": "^4.2.2",
+    "@fontsource/rubik": "^4.2.2",
     "animate.css": "^4.1.1",
     "bootstrap": "^4.6.0",
     "gatsby": "^3.0.1",

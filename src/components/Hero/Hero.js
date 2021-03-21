@@ -27,7 +27,9 @@ const Hero = () => {
           <Col md={6} className="text-container">
             <div className="no-overflow">
               <Scroll>
-                <h1>Nie zuvor war leihen so einfach.</h1>
+                <h1>
+                  Nie zuvor war <span>leihen</span> so einfach.
+                </h1>
               </Scroll>
             </div>
             <div className="no-overflow">

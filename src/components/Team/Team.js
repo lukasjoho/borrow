@@ -50,7 +50,9 @@ const Team = () => {
             {/* <Img fluid={image.childImageSharp.fluid} alt="" /> */}
             <div className="text-container">
               <Scroll>
-                <h2>Und wir fangen gerade erst an.</h2>
+                <h2 className="section-title">
+                  Und wir fangen gerade erst an.
+                </h2>
               </Scroll>
               <Scroll>
                 <p>

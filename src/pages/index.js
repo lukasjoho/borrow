@@ -13,6 +13,7 @@ import SEO from "src/components/Seo"
 import "../styles.scss"
 import Steps from "../components/Steps/Steps"
 import "@fontsource/just-me-again-down-here/400.css"
+import "@fontsource/rubik/600.css"
 import "animate.css/animate.min.css"
 import {
   Scroll,
@@ -44,12 +45,15 @@ const IndexPage = () => {
         <Header />
         <Hero />
         <Functionalities />
-        <Steps />
-        <Testimonials />
-        <Items />
-        <Box />
-        <Team />
+        <div className="site-gradient">
+          <Steps />
+          <Testimonials />
+          <Items />
+          <Box />
+          <Team />
+        </div>
         <GetStarted />
+
         <Footer />
       </Fade>
     </>

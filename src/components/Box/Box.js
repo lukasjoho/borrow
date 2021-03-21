@@ -36,7 +36,9 @@ const Box = () => {
               </Col>
 
               <Col lg={6} className="text-container">
-                <h2>Von der Ideation bis zur Borrow.App</h2>
+                <h2 className="section-title">
+                  Von der Ideation bis zur Borrow.App
+                </h2>
                 <p>
                   Erfahre mehr über die Story hinter Borrow. und folge uns auf
                   unserem weiteren Weg.

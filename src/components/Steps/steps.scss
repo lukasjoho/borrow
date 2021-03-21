@@ -15,6 +15,10 @@
     }
   }
   .staircase {
+    @include media-breakpoint-up(md) {
+      display: flex;
+      justify-content: center;
+    }
     & > div:nth-child(2) {
       @include media-breakpoint-up(md) {
         margin-top: 6rem;
@@ -27,12 +31,22 @@
     }
   }
   .step {
+    width: 100%;
+    @include media-breakpoint-up(md) {
+      width: 33%;
+    }
+    &:last-child {
+      width: auto;
+    }
     .content {
       display: flex;
       align-items: center;
       @include media-breakpoint-up(md) {
         display: unset;
       }
+    }
+    strong {
+      font-weight: 700;
     }
     .top {
       display: flex;
