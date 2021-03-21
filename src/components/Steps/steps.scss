@@ -1,26 +1,102 @@
+@import "../../variables";
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins/_breakpoints";
 #steps {
-  padding: 12rem 0;
+  padding: 6rem 0;
+  @include media-breakpoint-up(md) {
+    padding: 12rem 0;
+  }
   h2 {
     text-align: center;
+    margin-bottom: 6rem;
+    span {
+      color: $violet;
+    }
   }
   .staircase {
     & > div:nth-child(2) {
-      margin-top: 6rem;
+      @include media-breakpoint-up(md) {
+        margin-top: 6rem;
+      }
     }
     & > div:nth-child(3) {
-      margin-top: 12rem;
+      @include media-breakpoint-up(md) {
+        margin-top: 12rem;
+      }
     }
   }
   .step {
+    .content {
+      display: flex;
+      align-items: center;
+      @include media-breakpoint-up(md) {
+        display: unset;
+      }
+    }
+    .top {
+      display: flex;
+      position: relative;
+      .line {
+        flex-shrink: 1;
+        transform: rotate(90deg);
+
+        @include media-breakpoint-up(md) {
+          transform: translateX(2rem);
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .bottom {
+    }
+
     .box {
       width: 6rem;
       height: 6rem;
       border-radius: 100%;
       background: red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      margin-right: 2rem;
+      @include media-breakpoint-up(md) {
+        margin-right: 4rem;
+      }
+      &.blue {
+        background: $blue;
+      }
+      &.violet {
+        background: $violet;
+      }
+      &.green {
+        background: $green;
+      }
     }
     .number {
       opacity: 0.25;
       font-size: 3rem;
+      font-weight: 700;
+    }
+    .line-desktop {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+      transform: translate3d(-25%, -20%, 0) rotate(-5deg);
+      position: absolute;
+      left: 50%;
+
+      img {
+        width: 120%;
+      }
+    }
+    .line-mobile {
+      display: flex;
+      justify-content: center;
+      margin-top: 3rem;
     }
   }
 }

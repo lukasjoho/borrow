@@ -21,9 +21,11 @@ const Footer = () => {
     <section id="footer">
       <Container>
         <Row className="top">
-          <Col md={6}>
+          <Col md={6} className="brand">
             {/* <Img fluid={image.childImageSharp.fluid} alt="" /> */}
-            <Logo />
+            <div className="logo">
+              <Logo />
+            </div>
             <h2>
               Dont just buy. <br />
               Borrow. <br />

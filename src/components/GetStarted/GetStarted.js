@@ -5,13 +5,19 @@ import Img from "gatsby-image"
 import "./getstarted.scss"
 import Stores from "../00-General/Stores/Stores"
 import IconPattern from "src/images/icon-pattern.svg"
+import {
+  Scroll,
+  Zoom,
+  FadeInDown,
+  SlideInLeft,
+} from "src/components/00-General/Animation"
 const GetStarted = () => {
   const { image } = useStaticQuery(graphql`
     query {
       image: file(relativePath: { eq: "image-iphone-borrow.png" }) {
         childImageSharp {
-          fluid(quality: 70, maxWidth: 540) {
-            ...GatsbyImageSharpFluid_noBase64
+          fluid(quality: 70, maxWidth: 300) {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -23,7 +29,11 @@ const GetStarted = () => {
         <Row>
           <Col md={6} className="text-container">
             {/* <Img fluid={image.childImageSharp.fluid} alt="" /> */}
-            <h2>Starte jetzt und werde ein Teil der Borrow.Community.</h2>
+            <div className="no-overflow">
+              <Scroll>
+                <h2>Starte jetzt und werde ein Teil der Borrow.Community.</h2>
+              </Scroll>
+            </div>
             <Stores />
           </Col>
           <Col md={6} className="image-container">

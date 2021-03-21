@@ -12,11 +12,13 @@ import Testimonials from "../components/Testimonials/Testimonials"
 import SEO from "src/components/Seo"
 import "../styles.scss"
 import Steps from "../components/Steps/Steps"
+import "@fontsource/just-me-again-down-here/400.css"
+import "animate.css/animate.min.css"
 
 const IndexPage = () => {
   const { imageSeo } = useStaticQuery(graphql`
     query {
-      imageSeo: file(relativePath: { eq: "image-laughing-people.jpg" }) {
+      imageSeo: file(relativePath: { eq: "image-seo.jpg" }) {
         childImageSharp {
           fixed(width: 1200, quality: 90) {
             src

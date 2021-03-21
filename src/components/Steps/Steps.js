@@ -3,12 +3,43 @@ import { Container, Row, Col } from "react-bootstrap"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import "./steps.scss"
-const Step = ({ number, text }) => {
+import IconUser from "src/images/icon-user-plus.svg"
+import IconCheck from "src/images/icon-check.svg"
+import IconHandshake from "src/images/icon-handshake.svg"
+import IconLine1 from "src/images/icon-line-1.svg"
+import IconLine1Mobile from "src/images/icon-line-1-mobile.svg"
+import IconLine2 from "src/images/icon-line-2.svg"
+import {
+  Scroll,
+  Zoom,
+  FadeInDown,
+  SlideInLeft,
+} from "src/components/00-General/Animation"
+
+const Step = ({ icon, number, text, color, line }) => {
   return (
     <div className="step">
-      <div className="box"></div>
-      <div className="number">{number}</div>
-      <div>{text}</div>
+      <div className="content">
+        <div className="top">
+          <div className={`box ${color}`}>
+            <img src={icon} alt="" />
+          </div>
+          <div className="line-desktop">
+            {line && <img className="d-none d-md-block" src={line} alt="" />}
+          </div>
+        </div>
+        <div className="bottom">
+          <div className="number">{number}</div>
+          <div>
+            <p>{text}</p>
+          </div>
+        </div>
+      </div>
+      {line && (
+        <div className="line-mobile d-flex d-md-none">
+          <img src={IconLine1Mobile} alt="" />
+        </div>
+      )}
     </div>
   )
 }
@@ -30,19 +61,52 @@ const Steps = () => {
         <Row>
           <Col md={12}>
             {/* <Img fluid={image.childImageSharp.fluid} alt="" /> */}
-            <h2>In 3 Schritten zu deinem Item</h2>
+            <Scroll>
+              <h2>
+                In <span>3</span> Schritten zu deinem Item
+              </h2>
+            </Scroll>
           </Col>
         </Row>
         <Row className="staircase">
           <Col md={4}>
-            <Step number="01" text="Erstelle deinen kostenfreien Account" />
+            <Step
+              number="01"
+              text={
+                <>
+                  Erstelle deinen <strong>kostenfreien Account</strong>
+                </>
+              }
+              icon={IconUser}
+              color="blue"
+              line={IconLine1}
+            />
           </Col>
           <Col md={4}>
-            <Step number="02" text="Finde dein erstes Item" />
+            <Step
+              number="02"
+              text={
+                <>
+                  Finde dein <strong>erstes Item</strong>
+                </>
+              }
+              icon={IconCheck}
+              color="violet"
+              line={IconLine2}
+            />
           </Col>
 
           <Col md={4}>
-            <Step number="03" text="Borrow.It" />
+            <Step
+              number="03"
+              text={
+                <>
+                  <strong>Borrow </strong> it
+                </>
+              }
+              icon={IconHandshake}
+              color="green"
+            />
           </Col>
         </Row>
       </Container>

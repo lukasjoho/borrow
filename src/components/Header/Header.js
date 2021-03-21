@@ -9,7 +9,10 @@ const Header = () => {
       <Navbar.Brand href="#home">
         <Logo />
       </Navbar.Brand>
-      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      {/* <Navbar.Toggle aria-controls="responsive-navbar-nav" /> */}
+      <Nav.Link href="/" className="d-lg-none">
+        <Button text="Registrieren" />
+      </Nav.Link>
       <Navbar.Collapse id="responsive-navbar-nav">
         {/* <Nav className="mr-auto">
           <Nav.Link href="#features">Features</Nav.Link>
@@ -19,9 +22,9 @@ const Header = () => {
           <Nav.Link href="/">
             <Button text="Registrieren" />
           </Nav.Link>
-          <Nav.Link eventKey={2} href="/">
+          {/* <Nav.Link eventKey={2} href="/">
             Erfahre Mehr
-          </Nav.Link>
+          </Nav.Link> */}
         </Nav>
       </Navbar.Collapse>
     </Navbar>

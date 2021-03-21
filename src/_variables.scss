@@ -3,5 +3,18 @@
 @import "node_modules/bootstrap/scss/mixins/_breakpoints";
 
 //colors
+
+$grid-gutter-width: 6rem;
+$green: #72ce9a;
+
 $violet: #ce93d8;
 $blue: #6e9fe9;
+$text-secondary: #545b62;
+
+$background-colorful: linear-gradient(
+  180deg,
+  #6e9fe9 0%,
+  #6fcf97 33.25%,
+  #ce93d8 71.99%,
+  #f24e1e 100%
+);

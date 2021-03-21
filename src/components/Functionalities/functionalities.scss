@@ -1,15 +1,96 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins/_breakpoints";
 #functionalities {
   background: linear-gradient(104deg, #6e9fe9 -3.34%, #ce93d8 72.31%);
   color: white;
   .image-container {
     display: flex;
     align-items: flex-end;
+    position: relative;
+    .icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: white;
+      border-radius: 100%;
+      width: 6rem;
+      height: 6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 160%;
+        height: 160%;
+        border-radius: 100%;
+        border: 1px solid white;
+        opacity: 0.2;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 130%;
+        height: 130%;
+        border-radius: 100%;
+        border: 1px solid white;
+        opacity: 0.5;
+      }
+      img {
+        width: 60%;
+      }
+      &.first {
+        transform: translate3d(00%, 200%, 0);
+
+        @include media-breakpoint-up(lg) {
+          transform: translate3d(300%, 100%, 0);
+        }
+      }
+      &.second {
+        left: 50%;
+        transform: translate3d(-50%, 50%, 0);
+        @include media-breakpoint-up(lg) {
+          transform: translate3d(200%, 200%, 0);
+        }
+      }
+      &.third {
+        left: unset;
+        right: 0;
+        transform: translate3d(0%, 300%, 0);
+        @include media-breakpoint-up(lg) {
+          left: 0;
+        }
+      }
+    }
     .image {
+      margin-top: 10rem;
       width: 100%;
+      box-shadow: 0px 30px 20px -25px rgba($color: #000000, $alpha: 0.5);
+      @include media-breakpoint-up(lg) {
+        box-shadow: none;
+      }
     }
   }
   .text-container {
     padding-top: 6rem;
     padding-bottom: 6rem;
+    .item {
+      margin-bottom: 2rem;
+      p {
+        color: white;
+      }
+      &:nth-child(2) {
+        @include media-breakpoint-up(md) {
+          margin-left: 6rem;
+        }
+      }
+      &:nth-child(3) {
+        @include media-breakpoint-up(md) {
+          margin-left: 12rem;
+        }
+      }
+    }
   }
 }

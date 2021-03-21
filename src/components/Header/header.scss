@@ -4,9 +4,11 @@
   position: fixed;
   top: 0;
   left: 0;
+  padding: 1.5rem 3rem !important;
   .nav-link {
     display: flex;
     align-items: center;
     color: inherit !important;
+    padding: 0 !important;
   }
 }

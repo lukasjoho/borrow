@@ -1,11 +1,22 @@
 @import "../../variables";
+@import "~bootstrap/scss/bootstrap";
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins/_breakpoints";
 #getstarted {
   background: $violet;
   overflow: hidden;
+  padding: 3rem 0 0 0;
+  @include media-breakpoint-up(md) {
+    padding: 0rem 0 0 0;
+  }
   .text-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    h2 {
+      margin-bottom: 2rem;
+    }
   }
   .image-container {
     display: flex;
