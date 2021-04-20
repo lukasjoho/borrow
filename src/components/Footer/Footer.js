@@ -34,16 +34,40 @@ const Footer = () => {
           </Col>
           <Col md={3}>
             <ul>
-              <li>Pages</li>
-              <li>GitHub</li>
-              <li>Blogpost</li>
-              <li>Contact</li>
+              <li>Ressources</li>
+
+              <li>
+                <a href="https://github.com/lukasjoho/borrow" target="_blank">
+                  GitHub
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://inside-techlabs.medium.com/the-borrow-app-d938d9d2da72"
+                  target="_blank"
+                >
+                  Blogpost
+                </a>
+              </li>
+
+              <li>
+                <a href="https://www.techlabs.org/" target="_blank">
+                  Contact
+                </a>
+              </li>
             </ul>
           </Col>
           <Col md={3}>
             <ul>
               <li>Support</li>
-              <li>TechLabs</li>
+
+              <li>
+                <a href="https://www.techlabs.org/" target="_blank">
+                  TechLabs
+                </a>
+              </li>
+
               <li>Nina Engbert</li>
               <li>Lukas Hoppe</li>
             </ul>

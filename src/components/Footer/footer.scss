@@ -50,6 +50,9 @@
     }
     li {
       margin-bottom: 2rem;
+      a {
+        color: inherit;
+      }
     }
     li:last-child {
       margin: 0;
