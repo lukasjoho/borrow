@@ -43,11 +43,17 @@ const Box = () => {
                   Erfahre mehr über die Story hinter Borrow. und folge uns auf
                   unserem weiteren Weg.
                 </p>
-                <Button text="Über das Projekt" />
+                <a
+                  href="https://inside-techlabs.medium.com/the-borrow-app-d938d9d2da72"
+                  target="_blank"
+                >
+                  <Button text="Über das Projekt" />
+                </a>
               </Col>
             </Row>
             <div className="label">
               <img src={IconArrowBlack} alt="" />
+
               <span>Hier geht’s zu unserem Blogpost</span>
             </div>
           </div>
