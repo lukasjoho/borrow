@@ -23,7 +23,7 @@ const Member = ({ image, name, position, index }) => {
   )
 }
 const Team = () => {
-  const { imageAnika, imageLina } = useStaticQuery(graphql`
+  const { imageAnika, imageLina, imageAmelie } = useStaticQuery(graphql`
     query {
       imageAnika: file(relativePath: { eq: "image-anika.png" }) {
         childImageSharp {
@@ -33,6 +33,13 @@ const Team = () => {
         }
       }
       imageLina: file(relativePath: { eq: "image-lina.png" }) {
+        childImageSharp {
+          fluid(quality: 70, maxWidth: 300) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      imageAmelie: file(relativePath: { eq: "image-amelie.png" }) {
         childImageSharp {
           fluid(quality: 70, maxWidth: 300) {
             ...GatsbyImageSharpFluid_withWebp
@@ -68,7 +75,7 @@ const Team = () => {
               </Scroll>
             </div>
           </Col>
-          <Col md={3}>
+          <Col md={4}>
             <Member
               image={imageAnika}
               name="Anika"
@@ -76,7 +83,7 @@ const Team = () => {
               index={1}
             />
           </Col>
-          <Col md={3}>
+          <Col md={4}>
             <Member
               image={imageLina}
               name="Lina"
@@ -84,19 +91,12 @@ const Team = () => {
               index={2}
             />
           </Col>
-          <Col md={3}>
+
+          <Col md={4}>
             <Member
-              image={imageLina}
-              name="Fabio"
-              position="UX Design"
-              index={3}
-            />
-          </Col>
-          <Col md={3}>
-            <Member
-              image={imageLina}
+              image={imageAmelie}
               name="Amelie"
-              position="UX Design"
+              position="Web Development"
               index={4}
             />
           </Col>
